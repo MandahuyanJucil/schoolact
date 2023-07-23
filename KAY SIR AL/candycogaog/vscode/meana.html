@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy.Co</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="">
+    <script src="categories.js"></script>
+
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+    
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      margin-top: 30px;
+      margin: 20px;
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+    
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+      
+    }
+    
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    /* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1%;
+    
+}
+
+
+.logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.navbar {
+    padding-top: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-top: 0%;
+    height: 100%;
+    width: auto;
+    font-size: 20px;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+
+.header .navbar a {
+    font-size: 2.0rem;
+    color: var(--black);
+    margin: 0 1rem;
+    font-family: 'Vidaloka', sans-serif;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+    </style>
+    </head>
+    
+        <!-- header -->
+
+        <header class="header">
+
+            <a href="index.html" class="logo"><i class="fa-thin fa-candy"></i>Candy.Co </a>
+    
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="#Tour the Store">Tour the Store</a>
+                <a href="#Categories">Categories</a>
+                <a href="#Shop">Shop</a>
+                <a href="#Contact">Contact</a>
+            </nav>
+        </header>
+    <!-- end header -->
+    <br><br><br><br><br><br><br><br><br><br>
+    <body>
+
+
+     <div class="box-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="images/p2 (2).jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+        <p>200</p>
+        <a href="product1.html" class="btn">Buy now</a>
+      </div>
+    
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="images/p2 (2).jpg" alt="" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="images/p2 (2).jpg" alt="" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1> 
+          <p>Architect & Engineer</p> 
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+        <!-- parallax -->
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    
+    </body>
+    </html>
+    
+    

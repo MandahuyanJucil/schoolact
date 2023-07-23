@@ -1,0 +1,80 @@
+/* Body and general styles */
+body {
+    background-size: cover; /* You can use "contain" instead if you prefer */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* Optional: Set a fixed height to the body if you want the image to cover only a specific area */
+    /* height: 100vh; */
+}
+  
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #c98d83;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color:#c98d83;
+  }
+  
+  /* Additional Styles */
+  textarea {
+    resize: none;
+  }
+  
+  label[for="payment"],
+  select {
+    display: block;
+  }
+  
+  select {
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    form {
+      max-width: 100%;
+    }
+  }

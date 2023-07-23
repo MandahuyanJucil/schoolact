@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy.Co</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <script src="categories.js"></script>
+
+</head>
+<script>
+    function redirectToPage() {
+        const selectElement = document.getElementById("mySelect");
+        const selectedPage = selectElement.value;
+
+        // Check the current page and redirect accordingly
+        const currentPage = window.location.pathname;
+        const currentPageName = currentPage.substring(currentPage.lastIndexOf("/") + 1);
+
+        if (currentPageName !== selectedPage) {
+            window.location.href = selectedPage;
+        }
+    }
+
+     // ADD TO CART
+
+     function addToCart(productName, price, image) {
+  // Retrieve the existing cart items from local storage
+  var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  // Retrieve the quantity from the input field
+  var quantity = parseInt(document.getElementById("quantity").value);
+
+  // Create an object to store the product information
+  var item = {
+    name: productName,
+    price: price,
+    quantity: quantity,
+    image: image
+  };
+
+  // Check if the item is already in the cart
+  var existingItem = cartItems.find((cartItem) => cartItem.name === productName);
+  if (existingItem) {
+    // If the item already exists, update its quantity
+    existingItem.quantity += quantity;
+  } else {
+    // If the item does not exist, add it to the cart
+    cartItems.push(item);
+  }
+
+  // Store the updated cart items in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  // Calculate the total cart count based on the quantities of all items
+  var cartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
+
+  // Update the cart count in local storage
+  localStorage.setItem("cartCount", cartCount);
+
+  // Update the cart count in the header
+  document.getElementById("cart-count").innerText = cartCount;
+}
+</script>
+
+
+
+<body>
+
+    <!-- header -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo"><i class="fa-thin fa-candy"></i>Candy.Co </a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="#Tour the Store">Tour the Store</a>
+            <a href="#Categories">Categories</a>
+            <a href="#Shop">Shop</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href="shoppingcart.html">
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- parallax -->
+
+
+    <section class="parallax" id="categories">
+
+        <h1 id="categories-button">CATEGORIES</h1>
+
+        
+        <div class="small-container">
+
+            <div class="row row-2">
+                <h2>Gift Baskets</h2>
+                <select id="mySelect"  onchange="redirectToPage()">
+                    <option value="assortment.html">Select...</option>
+                    <option value="assortment.html">Assortment</option>
+                    <option value="giftbaskets.html">Gift-Baskets</option>
+                    <option value="specialty.html">Specialty</option>
+                    <option value="darksweetscandy.html">Dark Sweets Candies</option>
+                    <option value="whitesweetscandy.html">White Sweets Candies</option>
+                    <option value="nuts.html">Nuts</option>
+                    <option value="others.html">Others</option>
+                </select>
+            </div>
+
+        <div class="search">
+            <form>
+                <input type="text" placeholder="search..." />
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+    </section>
+
+    <!--Products-->
+    <!-- product -->
+
+    <section class="product" id="product">
+
+        <h1 class="heading">our <span> products</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Chocolate Delights</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Chocolate Delights', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Sharable Candy Gift Basket</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Sharable Candy Gift Basket', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Christmas Chocolates</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Christmas Chocolates', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Happy Birthday Snack & Sweets Gift Baskets</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Happy Birthday Snack & Sweets Gift Baskets', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g5.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Valentines Treat Gift Baskets</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                      <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Valentines Treat Gift Baskets', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/g6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Shareable Sweets</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                     <div class="quantity-container">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                        <h2>&nbsp;&nbsp;Price: ₱350</h2>
+                      </div>
+                      
+                      <div id="checkout-button">
+                        <button onclick="addToCart('Shareable Sweets', 350)">ADD TO CART <img src="" class="fa fa-shopping-cart"></i></button>
+                      </div>
+                    </div>
+                  </div>
+
+        </div>
+
+    </section>
+
+
+    <!--Products End -->
+    <!-- parallax -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+
+
+</body>
+</html>

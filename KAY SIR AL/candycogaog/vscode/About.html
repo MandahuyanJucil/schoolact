@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy.Co</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+</head>
+<style>
+    /* Reset some default styles */
+    html, body {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Header styles */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: var(--bg);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 9%;
+        font-size: 2.0rem;
+    }
+    * {
+    font-family: 'Vidaloka', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+    :root {
+    --primary-color: #c98d83;
+    --secondary: #783b31;
+    --bg: #f2f1ec;
+    --black: #000;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+    /*  body  */
+
+    .heading span {
+        text-align: center;
+        color: var(--primary-color);
+        color: var(--secondary);
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        padding: 1.2rem 0;
+        font-size: 4rem;
+    }
+    /* Logo styles */
+    .logo {
+        text-decoration: none;
+        color: #333;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: var(--black);
+    }
+
+        .logo i {
+            font-size: 28px;
+            margin-right: 5px;
+        }
+
+    /* Navbar styles */
+    .navbar {
+        margin: 10px;
+        flex: 1;
+        text-align: center;
+    }
+
+        .navbar a {
+            text-decoration: none;
+            color: #555;
+            margin-right: 10px;
+        }
+
+            .navbar a:hover {
+                color: #333;
+            }
+
+    .about {
+        background-color: #f9f9f9;
+        padding: 40px;
+    }
+
+        .about .heading {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-size: 4rem;
+        }
+
+        .about .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .about .image {
+            flex: 1;
+            text-align: center;
+        }
+
+            .about .image img {
+                max-width: 100%;
+                height: auto;
+            }
+
+        .about .content {
+            flex: 1;
+            padding-left: 40px;
+            text-align: justify;
+        }
+
+        .about h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+    h1.heading {
+        text-transform: uppercase;
+    }
+
+    div.content {
+        color: black; /* Set the color for the content */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar {
+            margin-top: 20px;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+
+        .image {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+<body>
+    <!-- header -->
+
+    <header class="header">
+
+        <a href="index.php" class="logo"><i class="fa-thin fa-candy"></i>Candy.Co </a>
+
+        <nav class="navbar">
+            <a href="index.php">Home</a>
+            <a href="About.html">About</a>
+            <a href="Categories.html">Categories</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- body about us -->
+    <section class="about" id="about">
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <h1 class="heading">
+            <span>about</span> us <br> <br>
+
+            <div class="content">
+                <h3>Every Piece Made With Love</h3>
+                <p>We pride ourselves on 100+ handmade candies in white, milk and dark chocolate. We have 3 generations of experience manufacturing the finest candy the old-fashioned way, "one piece at a time."</p>
+            </div>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/about.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="image">
+                <img src="images/bg5.jpg" alt="">
+
+            </div>
+            <div class="content">
+                <h3>Our History</h3>
+                <p>The Candy Co. originated in 1961 when Vanguradia opened the store in Lardizabal, Manila as a small candy shop. Candy.Co embarked on a delightful journey of crafting homemade candies. What began as a humble kitchen experiment quickly blossomed into a beloved confectionery brand. Inspired by a passion for sweets and a desire to bring joy to people's lives, Candy.Co tirelessly honed its craft. Through years of dedication, innovation, and commitment to quality, the brand became synonymous with delectable treats. Each candy is lovingly handmade using traditional recipes and the finest ingredients. From classic favorites to unique flavor combinations, Candy.Co's confections continue to captivate taste buds, evoking nostalgic memories and creating new moments of sweetness. Today, Candy.Co stands as a cherished name, delighting candy enthusiasts with every delicious bite.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image">
+                <img src="images/bg5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Our Store</h3>
+                <p>Step into our Candy.Co store, where a world of sweetness awaits you. From the moment you enter, you'll be greeted by the enchanting aroma of freshly made candies. Our shelves are filled with an irresistible assortment of homemade confections, meticulously crafted with love and care. Explore the vibrant colors and whimsical shapes that adorn our candies, each one a testament to our passion for creating delightful treats. Our friendly staff is always ready to guide you through our delectable offerings, ensuring you find the perfect candies to satisfy your cravings. Indulge in the magic of Candy.Co and let your taste buds embark on a journey of pure sweetness.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image">
+                <img src="images/bg5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Giving Back</h3>
+                <p>At Candy.Co, we prioritize supporting local charities that address critical needs within our community. From organizations providing food to the underprivileged to those championing educational opportunities for children, we strive to make a difference in the lives of our neighbors. A portion of the proceeds from every candy purchase goes directly to these deserving causes, ensuring that the community's most vulnerable members receive the support they need. Together, let us continue sweetening lives and making the world a better place, one candy at a time.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.gallery .gallery-container'));
+    </script>
+
+
+</body>
+</html>

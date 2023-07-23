@@ -1,0 +1,106 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+        font-family: 'Times New Roman', Times, serif;
+       /* background-image: url(images/bg3.jpg);*/
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+a{
+    text-decoration: none;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 400vh;
+    height: 100vh ;
+   /* background-color: #ecd4c7;*/
+
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*border: solid 2PX #8b5a4f;*/
+    height: 300px;
+    width: 400px;
+}
+
+form input {
+    
+    margin-top: 15px;
+}
+
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height: 90px;
+  
+
+}
+
+.loginbtn{
+    margin-left: 90px;
+    font-size: 20px;
+    width: 90px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.usernameinputs2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10PX;
+    height: 40PX;
+
+}
+
+#login-form-wrap{
+    border: solid 2PX #8b5a4f;
+    background-color: wheat;
+}
+
+.top__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.regiter_container{
+    margin-top: 20px;
+    font-style: normal;
+    margin-bottom: 20PX;
+}
+
+.marginrememberme{
+    margin-right: 30px;
+}
+
+.member{
+    margin-right: 30px;
+}
+
+.not{
+    font-style: normal;
+    color: #000000;
+    text-decoration: #000000;
+
+ 
+}

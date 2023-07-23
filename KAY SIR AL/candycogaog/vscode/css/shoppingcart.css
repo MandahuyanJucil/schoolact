@@ -1,0 +1,132 @@
+/* Reset some default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #f2f1ec;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-icon img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }
+  
+  #cart-count {
+ 
+    top: -5px;
+    right: -5px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  /* Main styles */
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  main h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  #cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #cart-items li:last-child {
+    border-bottom: none;
+  }
+  
+  #cart-items span {
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #c98d83;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px; /* Adjust this value to add more or less space on the top */
+    border-radius: 5px;
+    display: block;
+    margin: 5px;
+  }
+  
+  
+  button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Back to Main Menu link */
+  #main-menu-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #c98d83;
+    /*text-decoration: none;*/
+    font-size: 16px;
+   /* border: 1px solid #c98d83;*/
+    padding: 8px 16px;
+    border-radius: 5px;
+   /* transition: background-color 0.3s ease;*/
+  }
+  
+ /* #main-menu-link:hover {
+    background-color: #c98d83;
+    color: #ffffff;
+  }*/
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 600px) {
+    header h1 {
+      font-size: 24px;
+    }
+  
+    #cart-items span {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
